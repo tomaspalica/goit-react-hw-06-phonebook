@@ -50,9 +50,9 @@ export const App = () => {
 
   useEffect(() => {
     if (contactsList) {
-      localStorage.setItem('contacts', JSON.stringify(contactsList));
+      localStorage.setItem('contacts', JSON.stringify(contacts));
     }
-  }, [contactsList]);
+  }, [contacts]);
 
   //  componentDidUpdate(prevProps, prevState){
   //   if(prevState.contacts === this.state.contacts){
