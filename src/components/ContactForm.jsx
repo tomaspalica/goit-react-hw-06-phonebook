@@ -7,10 +7,6 @@ const ContactForm = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  useEffect(() => {
-    
-    localStorage.setItem('contacts', JSON.stringify(contactsList));
-  }, [contactsList]);
 
   useEffect(() => {
     const contactFromLS = localStorage.getItem('contacts');
@@ -18,6 +14,9 @@ const ContactForm = () => {
       dispatch(readContacts(JSON.parse(localStorage.getItem('contacts'))));
     }
   }, [dispatch]);
+  useEffect(() => {
+    localStorage.setItem('contacts', JSON.stringify(contactsList));
+  }, [contactsList]);
 
   const handleChange = e => {
     if (e.currentTarget.name === 'name') {
