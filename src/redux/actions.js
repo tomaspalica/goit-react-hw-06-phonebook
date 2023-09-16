@@ -12,6 +12,7 @@ export const addContacts = createAction(
     };
   }
 );
+export const readContacts = createAction('contacts/readContacts')
 
 export const deleteContacts = createAction('contacts/deleteContacts');
 
