@@ -5,10 +5,9 @@ export const ContactsList = () => {
   const filter = useSelector(state => state.filter);
   const contacts = useSelector(state => state.contacts);
   const dispatch = useDispatch();
-  console.log(contacts);
+
   const contactDelete = el => {
     dispatch(deleteContacts(el.target.id));
-    
   };
 
   const normalizedFilter = filter.toLowerCase();
